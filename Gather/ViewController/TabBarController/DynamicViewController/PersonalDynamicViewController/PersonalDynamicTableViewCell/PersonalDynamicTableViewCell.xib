@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="146" id="Wd3-7D-xDD" customClass="PersonalDynamicTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wd3-7D-xDD" id="1rB-be-cTm">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLp-Kp-bzX">
+                        <rect key="frame" x="77" y="10" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgS-Cg-344">
+                        <rect key="frame" x="78" y="32" width="220" height="73"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pLT-PK-0dn">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="73"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cQR-YO-9VL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pLT-PK-0dn" secondAttribute="trailing" id="PBO-VE-egD"/>
+                            <constraint firstAttribute="bottom" secondItem="pLT-PK-0dn" secondAttribute="bottom" id="PdQ-ia-GrW"/>
+                            <constraint firstItem="pLT-PK-0dn" firstAttribute="leading" secondItem="TgS-Cg-344" secondAttribute="leading" id="Q5N-TC-Phv"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="65" id="lpS-Wl-fEE"/>
+                            <constraint firstItem="pLT-PK-0dn" firstAttribute="top" secondItem="TgS-Cg-344" secondAttribute="top" id="o9B-e7-ww6"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="rhu-Wb-voY"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30十二月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3O-bS-liU">
+                        <rect key="frame" x="8" y="8" width="66" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="2si-E0-6dy"/>
+                            <constraint firstAttribute="height" constant="22" id="fLO-4L-Huj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKy-Q9-Abt">
+                        <rect key="frame" x="65" y="112" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="1UX-Gz-iIk"/>
+                            <constraint firstAttribute="height" constant="30" id="DCK-Rg-JSz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="删除">
+                            <color key="titleColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButtonClick:" destination="Wd3-7D-xDD" eventType="touchUpInside" id="Qn6-SC-9CZ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmn-I8-5cN">
+                        <rect key="frame" x="247" y="112" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="MMw-cb-FTU"/>
+                            <constraint firstAttribute="height" constant="30" id="XHc-9d-pbA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="评论">
+                            <color key="titleColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="commentButtonClick:" destination="Wd3-7D-xDD" eventType="touchUpInside" id="EZg-ta-j4j"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pmn-I8-5cN" firstAttribute="top" secondItem="TgS-Cg-344" secondAttribute="bottom" constant="7" id="22l-Gv-dEs"/>
+                    <constraint firstAttribute="bottom" secondItem="pmn-I8-5cN" secondAttribute="bottom" constant="3" id="4G1-jq-Y5c"/>
+                    <constraint firstItem="OLp-Kp-bzX" firstAttribute="leading" secondItem="O3O-bS-liU" secondAttribute="trailing" constant="3" id="8VN-Z7-kYU"/>
+                    <constraint firstItem="TgS-Cg-344" firstAttribute="leading" secondItem="1rB-be-cTm" secondAttribute="leading" constant="78" id="D6y-7t-FcW"/>
+                    <constraint firstAttribute="trailing" secondItem="TgS-Cg-344" secondAttribute="trailing" constant="22" id="Dlm-Uv-koz"/>
+                    <constraint firstAttribute="trailing" secondItem="pmn-I8-5cN" secondAttribute="trailing" constant="13" id="J93-aA-FWc"/>
+                    <constraint firstItem="ZKy-Q9-Abt" firstAttribute="leading" secondItem="1rB-be-cTm" secondAttribute="leading" constant="65" id="Tp9-T5-ksg"/>
+                    <constraint firstItem="O3O-bS-liU" firstAttribute="top" secondItem="1rB-be-cTm" secondAttribute="top" constant="8" id="Ylq-ik-KSQ"/>
+                    <constraint firstAttribute="bottom" secondItem="ZKy-Q9-Abt" secondAttribute="bottom" constant="3" id="bx6-3Z-3PM"/>
+                    <constraint firstItem="TgS-Cg-344" firstAttribute="top" secondItem="OLp-Kp-bzX" secondAttribute="bottom" constant="5" id="fru-Ea-0sJ"/>
+                    <constraint firstItem="ZKy-Q9-Abt" firstAttribute="top" secondItem="TgS-Cg-344" secondAttribute="bottom" constant="7" id="gPX-tt-S4h"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OLp-Kp-bzX" secondAttribute="trailing" constant="25" id="gXb-I8-iEu"/>
+                    <constraint firstItem="pmn-I8-5cN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZKy-Q9-Abt" secondAttribute="trailing" priority="750" constant="99" id="nIA-Ev-1Xt"/>
+                    <constraint firstItem="O3O-bS-liU" firstAttribute="leading" secondItem="1rB-be-cTm" secondAttribute="leading" constant="8" id="rhx-0N-0l8"/>
+                    <constraint firstItem="OLp-Kp-bzX" firstAttribute="top" secondItem="1rB-be-cTm" secondAttribute="top" constant="10" id="ywV-iw-aGy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="pLT-PK-0dn" id="lkc-er-bgn"/>
+                <outlet property="commentButton" destination="pmn-I8-5cN" id="u4j-7K-GlL"/>
+                <outlet property="contentLabel" destination="OLp-Kp-bzX" id="nhd-Sm-gPA"/>
+                <outlet property="deleteButton" destination="ZKy-Q9-Abt" id="mn0-rA-BWU"/>
+                <outlet property="photoView" destination="TgS-Cg-344" id="csU-Oc-K2F"/>
+                <outlet property="photoViewHeight" destination="lpS-Wl-fEE" id="SdN-Ts-MIz"/>
+                <outlet property="timeLabel" destination="O3O-bS-liU" id="Sqj-dI-6b8"/>
+            </connections>
+            <point key="canvasLocation" x="-108" y="465"/>
+        </tableViewCell>
+    </objects>
+</document>

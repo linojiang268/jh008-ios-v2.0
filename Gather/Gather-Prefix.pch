@@ -1,0 +1,336 @@
+//
+//  Gather-Prefix.pch
+//  Gather
+//
+//  Created by Ray on 14-12-23.
+//  Copyright (c) 2014年 zero2all. All rights reserved.
+//
+
+#ifndef Gather_Gather_Prefix_pch
+#define Gather_Gather_Prefix_pch
+
+#import "Common.h"
+#import "Network.h"
+#import "AppDelegate.h"
+#import <UIColor+Hex.h>
+#import "UIControl+Extend.h"
+#import "NSString+Extend.h"
+#import "UIStoryboard+Extend.h"
+#import "UINavigationItem+Extend.h"
+#import <UIImageView+WebCache.h>
+#import "BlockAlertView.h"
+#import "CoreData+MagicalRecord.h"
+#import <SVProgressHUD.h>
+#import <SZTextView.h>
+#import "UITableView+CueWordsView.h"
+#import "UICollectionView+CueWordsView.h"
+#import "UITableViewCell+Extend.h"
+#import "IDMPhotoBrowser+Extend.h"
+#import <ReactiveCocoa.h>
+#import "TalkingData.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - Enum -------------------------------------------
+
+/// 性别
+typedef NS_ENUM(NSUInteger, Sex) {
+    SexMan      = 1,
+    SexWoman    = 2,
+};
+
+/// 验证码类型
+typedef NS_ENUM(NSUInteger, VerifyCodeType) {
+    VerifyCodeTypeNewUser         = 1,
+    VerifyCodeTypeForgetPassword  = 2,
+};
+
+/// Tag类型
+typedef NS_ENUM(NSUInteger, TagType) {
+    TagTypeCategory         = 1,
+    TagTypeIndividuality    = 2,
+};
+
+/// 好友列表类型
+typedef NS_ENUM(NSUInteger, FriendType) {
+    FriendTypeMyFocus   = 1,
+    FriendTypeMyFans    = 2,
+};
+
+/// 导航栏样式
+typedef NS_ENUM(NSUInteger, NavigationBarBackgroundStyle) {
+    NavigationBarBackgroundStyleWhite           = 1,
+    NavigationBarBackgroundStyleTranslucence    = 2,
+    NavigationBarBackgroundStyleTranslucent     = 3,
+};
+
+/// 导航栏样式
+typedef NS_ENUM(NSUInteger, NavigationBarBackButtonStyle) {
+    NavigationBarBackButtonStyleWhite   = 1,
+    NavigationBarBackButtonStyleYellow  = 2,
+};
+
+/// 分享类型
+typedef NS_ENUM(NSUInteger, GatherShareType) {
+    GatherShareTypeWeChat           = 1,
+    GatherShareTypeSinaWeibo        = 2,
+    GatherShareTypeWeChatFriend     = 3,
+    GatherShareTypeQQZone           = 4
+};
+
+/// 推送类型，接收通知后的路由跳转
+typedef NS_ENUM(NSUInteger, PushType) {
+    PushTypeActive  = 11,
+    PushTypeNews    = 21,
+    PushTypeUser    = 31,
+    PushTypeDynamic = 41,
+    PushTypeChat    = 51
+};
+
+typedef NS_ENUM(NSUInteger, BaiduCloudSearchType) {
+    BaiduCloudSearchTypeNearby  = 1,
+    BaiduCloudSearchTypeBounds  = 2,
+};
+
+#pragma mark - Version
+
+/// App ID 检查更新需要
+static NSString *const kAPP_ID = @"935532535";
+
+#define __Gather_1_0__      100
+#define __Gather_2_0__      200
+#define __Gather_2_0_1__    201
+#define __Gather_2_0_2__    202
+
+#define __Gather_Version_Max __Gather_2_0_2__
+
+#pragma mark - Common -------------------------------------------
+
+/// Cell 标识
+static NSString *const kCellIdentifier = @"Cell";
+
+#pragma mark - Server -------------------------------------------
+
+#ifdef DEBUG
+    /// 测试服务器根地址
+    static NSString *const kSERVER_BASE_URL = @"http://staging.app.jhla.com.cn/";
+#else
+    /// 正式服务器根地址
+    static NSString *const kSERVER_BASE_URL = @"http://app.jhla.com.cn/";
+#endif
+
+#pragma mark - Baidu -------------------------------------------
+
+#ifdef DEBUG
+    /// 推送 1：开发状态 2：生产状态
+    static NSUInteger const kPUSH_STATUS = 1;
+#else
+    /// 推送 1：开发状态 2：生产状态
+    static NSUInteger const kPUSH_STATUS = 2;
+#endif
+
+/// 推送自定义字段 用于路由跳转
+static NSString *const kPUSH_TYPE_KEY = @"filter_k_id";
+static NSString *const kPUSH_TYPE_VALUE = @"filter_v_id";
+
+/// 百度云检索地址，周边
+static NSString *const kBaidu_Cloud_Nearby_Search_URL = @"http://api.map.baidu.com/geosearch/v3/nearby";
+
+/// 百度云检索地址，矩形
+static NSString *const kBaidu_Cloud_Bounds_Search_URL = @"http://api.map.baidu.com/geosearch/v3/nearby";
+
+/// 百度云检索AK值
+static NSString *const kBaidu_Cloud_Search_AK = @"pKwRXmjD4zwKYBbrK0olawyt";
+
+#ifdef DEBUG
+    /// 百度云检索TableID值
+    static NSUInteger const kBaidu_Cloud_Search_Table_ID = 94390;
+#else
+    /// 百度云检索TableID值
+    static NSUInteger const kBaidu_Cloud_Search_Table_ID = 94392;
+#endif
+
+/// 百度云检索半径值
+static NSUInteger const kBaidu_Cloud_Search_Radius = 300000;
+
+#pragma mark - AliPay -------------------------------------------
+
+/// 商户PID
+static NSString *const kAliPay_Partner = @"2088412900994954";
+
+/// 商户收款账号
+static NSString *const kAliPay_Seller = @"212919377@qq.com";
+
+#ifdef DEBUG
+    /// 测试支付宝回调地址
+    static NSString *const kAliPay_Callback_URL = @"http://staging.app.jhla.com.cn/act/pay/alipayNotifyUrl";
+#else
+    /// 正式支付宝回调地址
+    static NSString *const kAliPay_Callback_URL = @"http://app.jhla.com.cn/act/pay/alipayNotifyUrl";
+#endif
+
+/// 商户私钥，pkcs8格式
+static NSString *const kAliPay_RSA_Private = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJl2mq22CL3fXPuZvm3JaAwehti+ETjgvWptw3kYR9sXahxtLcXvglcTzEf2exXxd+Pf9kIomh18COMuoxqj2NVHzLkvSmflx8Q+bTNhp9Cm94fm0RhuCcGMUwjC/59cAxo0jsrVKkQe2x0epbomKBjmIiWdzsTgmbd06Wm7e1tvAgMBAAECgYAaYhSXlrsMAZGXw8fEUiLsKndeXdbSI3kNCg/YCr+Xv//DIVYEOHf9Bm9RU+O3Uwschw1sNFTCiudwPz1VQCPvysAzNW/FlNcvXoUIXhwBP+7YDnQL619zwrtvGYyb341oKGJD5Pyg61frNOjO081PHD9y3jINIZo/jhkFDn82+QJBAManRsE4yRyFWX2Rv1L7fgLXS80EonpV13qsrfntf4g0cPYUIGyg7oaF0K4Ee66MWqDO47owdZZb41lNp7yDyTUCQQDFw7lUE4F2PczBtiXNXSdnb3bCnXErxTO/6st12X5SPpepn3Hq6/JToL5G9XRwYULEsAxX4n0aliRxNXxvP8qTAkBBamIdTKLFNpBCjlUPcWuMafM3HviWCmB7sBNWQsQFSSeNkREgVFpXiAcw1p8X2nYZkCdjb4O5MKcMCEtdA5SlAkEArLyPNOOwsbG7FfveOulB0LPoPIa+YefmkpwnyLEHCBlJ6Uuuee5LBEajzGD6qmoZoqjOrzjR4xX/kK6SGK3UZwJAe8U0j9AaUHv+sYrOD3P5nMDPZjViqyAbaZGTvmp6ymXQ9XYcrFXZ8CrRQcA2q26hrmTJ6lMI4kPzS4TPJaUlsg==";
+
+/// 支付宝公钥
+static NSString *const kAliPay_RSA_Public = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxj/9qwVfgoUh/y2W89L6BkRAFljhNhgPdyPuBV64bfQNN1PjbCzkIM6qRdKBoLPXmKKMiFYnkd6rAoprih3/PrQEB/VsW8OoM8fxn67UDYuyBTqA23MML9q1+ilIZwBC2AQ2UBVOrFXfFl75p6/B5KsiNG9zpgmLCUYuLkxpLQIDAQAB";
+
+#pragma mark - WeChat Pay -------------------------------------------
+//APPID
+#define WE_CHAT_APP_ID          @"wx325197f88ad7ba47"
+//appsecret
+#define WE_CHAT_APP_SECRET      @"07b59c13cb5447cb8efb9d8d6ff785e4"
+//商户号
+#define WE_CHAT_MCH_ID          @"1233653402"
+//商户API密钥
+#define WE_CHAT_SECRET_ID      @"9bfe7c6249f79ab1012e726fd84d872b"
+//支付结果回调页面
+#define WE_CHAT_NOTIFY_URL      @"http://test.app.jhla.com.cn/act/pay/wxpayNotifyUrl"
+//获取服务器端支付数据地址（商户自定义）
+#define WE_CHAT_SP_URL          @"http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php"
+
+#pragma mark - Notification Name -------------------------------------------
+
+// 通知
+static NSString *const kPUBLISH_NOTIFICATION_NAME                   = @"PUBLISH_NOTIFICATION_NAME";
+static NSString *const kPUBLISH_CANCEL_NOTIFICATION_NAME            = @"PUBLISH_CANCEL_NOTIFICATION_NAME";
+static NSString *const kPUBLISH_SUCCESS_NOTIFICATION_NAME           = @"PUBLISH_SUCCESS_NOTIFICATION_NAME";
+static NSString *const kPUBLISH_FAILED_NOTIFICATION_NAME            = @"PUBLISH_FAILED_NOTIFICATION_NAME";
+static NSString *const kSTAR_SEARCH_NOTIFICATION_NAME               = @"STAR_SEARCH_NOTIFICATION_NAME";
+static NSString *const kSTAR_CLASSIFY_SEARCH_NOTIFICATION_NAME      = @"STAR_CLASSIFY_SEARCH_NOTIFICATION_NAME";
+static NSString *const kCOMMENT_DELETE_NOTIFICATION_NAME            = @"COMMENT_DELETE_NOTIFICATION_NAME";
+static NSString *const kCHANGE_CITY_NOTIFICATION_NAME               = @"CHANGE_CITY_NOTIFICATION_NAME";
+static NSString *const kWE_CHAT_PAY_END_NOTIFICATION_NAME           = @"CHANGE_CITY_NOTIFICATION_NAME";
+static NSString *const kPAY_END_NOTIFICATION_NAME                   = @"CHANGE_CITY_NOTIFICATION_NAME";
+static NSString *const kAPPLY_SUCCESS_NOTIFICATION_NAME             = @"APPLY_SUCCESS_NOTIFICATION_NAME";
+
+#pragma mark - Flag -------------------------------------------
+
+// 标识
+static NSString *const kLOGIN_FLAG                          = @"LOGIN_FLAG";
+static NSString *const kUSER_ID_FLAG                        = @"USER_ID_FLAG";
+static NSString *const kCURRENT_CITY_ID_FLAG                = @"CURRENT_CITY_ID_FLAG";
+static NSString *const kCITYS_FLAG                          = @"CITY_FLAG";
+static NSString *const kUSER_INFO_FLAG                      = @"USER_INFO_FLAG";
+static NSString *const kCURRENT_CYTI_NAME_FLAG              = @"CURRENT_CYTI_NAME_FLAG";
+static NSString *const kCURRENT_FULL_ADDRESS_FLAG           = @"CURRENT_FULL_ADDRESS_FLAG";
+static NSString *const kCURRENT_LOCATOIN_LATITUDEl_FLAG     = @"CURRENT_LOCATOIN_LATITUDEl_FLAG";
+static NSString *const kCURRENT_LOCATOIN_LONGITUDE_FLAG     = @"CURRENT_LOCATOIN_LONGITUDE_FLAG";
+static NSString *const kTAG_CATEGORY_LIST_FLAG              = @"TAG_CATEGORY_LIST_FLAG";
+static NSString *const kTAG_INDIVIDUALITY_LIST_FLAG         = @"TAG_INDIVIDUALITY_LIST_FLAG";
+
+#pragma mark - Image -------------------------------------------
+
+static NSString *const kBACK_BUTTON_STYLE_WHITE   = @"btn_back_white";
+static NSString *const kBACK_BUTTON_STYLE_YELLOW  = @"btn_back_yellow";
+
+static NSString *const kNAVIGATION_BAR_BACKGROUND_STYLE_WHITE           = @"navigationbar_background_white";
+static NSString *const kNAVIGATION_BAR_BACKGROUND_STYLE_TRANSLUCENCE    = @"navigationbar_background_translucence";
+static NSString *const kNAVIGATION_BAR_BACKGROUND_STYLE_TRANSLUCENT     = @"navigationbar_background_translucent";
+
+#define BACK_IMAGE_WHITE image_with_name(@"btn_back_white")
+#define BACK_IMAGE_YELLOW image_with_name(@"btn_back_yellow")
+
+#define NAVIGATION_BAR_BACKGROUND_IMAGE_WHITE image_with_name(@"navigationbar_background_white")
+#define NAVIGATION_BAR_BACKGROUND_IMAGE_TRANSLUCENCE image_with_name(@"navigationbar_background_translucence")
+#define NAVIGATION_BAR_BACKGROUND_IMAGE_TRANSLUCENT image_with_name(@"navigationbar_background_translucent")
+
+#pragma mark - Color -------------------------------------------
+
+/// 黄色
+static NSUInteger kColor_ff9933 = 0xff9933;
+/// 内容 / 时间
+static NSUInteger kColor_8e949b = 0x8e949b;
+/// 昵称 / 标题
+static NSUInteger kColor_6e7378 = 0x6e7378;
+static NSUInteger kColor_808080 = 0x808080;
+static NSUInteger kColor_dbdbdb = 0xdbdbdb;
+/// 背景色
+static NSUInteger kColor_f8f8f8 = 0xf8f8f8;
+/// 分割色
+static NSUInteger kColor_c9c9c9 = 0xc9c9c9;
+
+#pragma mark - Module Control
+
+/// 是否显示动态模块
+static const BOOL DYNAMIC_MODULE_IS_SHOW = NO;
+
+#pragma mark - Macro Define -------------------------------------------
+
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define SCREEN_WIDTH CGRectGetWidth([[UIScreen mainScreen] bounds])
+#define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
+
+#define SET_STATUSBAR_HIDE(HIDE) [[UIApplication sharedApplication] setStatusBarHidden:HIDE withAnimation:UIStatusBarAnimationFade];
+#define SET_STATUSBAR_STYLE(STYLE) [[UIApplication sharedApplication] setStatusBarStyle:STYLE animated:YES];
+
+#define SHOW_LOAD_HUD [SVProgressHUD show];
+#define SHOW_SUCCESS_HUD [SVProgressHUD showSuccessWithStatus:@"操作成功"];
+#define SHOW_ERROR_HUD [SVProgressHUD showErrorWithStatus:@"操作失败"];
+#define DISMISS_HUD [SVProgressHUD dismiss];
+
+#define NETWORK_REACHABLE [AFNetworkReachabilityManager sharedManager].reachable
+
+// 发布时存储图片的路径
+#define PUBLISH_IMAGE_DIRECTORY_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"PUBLISH_IMAGE_PATH"]
+#define PUBLISH_IMAGE_PATH_WITH_NAME(NAME) [PUBLISH_IMAGE_DIRECTORY_PATH stringByAppendingPathComponent:NAME]
+#define PUBLISH_IMAGE_WITH_NAME(NAME) [UIImage imageWithContentsOfFile:PUBLISH_IMAGE_PATH_WITH_NAME(NAME)]
+
+#define color_clear [UIColor clearColor]
+#define color_white [UIColor whiteColor]
+#define color_with_hex(hex_color) [UIColor colorWithHex:hex_color]
+
+#define circle_view(view)   view.layer.masksToBounds = YES; \
+                            view.layer.borderWidth = 0.5;\
+                            view.layer.cornerRadius =  CGRectGetWidth(view.bounds) / 2;\
+                            view.layer.borderColor = [color_with_hex(0xc9c9c9) CGColor];\
+
+#define round_button_default_color color_with_hex(kColor_ff9933)
+#define round_button(button,color) button.layer.masksToBounds = YES; \
+                             button.layer.cornerRadius = 5.0;\
+                             button.layer.borderWidth = 1;\
+                             button.layer.borderColor = [color CGColor];\
+
+#define alert_login [[[BlockAlertView alloc] initWithTitle:nil message:@"想做更多需要登陆的噢，亲" handler:^(UIAlertView *alertView, NSUInteger index) {\
+                        if (index) {\
+                            [(AppDelegate *)[UIApplication sharedApplication].delegate\
+                             showLoginView];\
+                        }\
+                    } cancelButtonTitle:@"取消" otherButtonTitles:@"马上登陆"] show];\
+
+#define verify_is_login if (![Common isLogin] && [Common getCurrentUserId] <= 0) {\
+                                alert_login;\
+                                return;\
+                        }\
+
+
+
+#define thumbnail_url(url,width,height) [url stringByAppendingFormat:@"@%dw_%dh_1e_0c_100Q_1x.jpg",(NSUInteger)width*2,(NSUInteger)height*2]
+#define thumbnail_url_with_view(url,view) thumbnail_url(url, CGRectGetWidth(view.bounds), CGRectGetHeight(view.bounds))
+#define image_with_name(name) [UIImage imageNamed:name]
+#define placeholder_image image_with_name(@"img_placeholder")
+
+#ifdef DEBUG
+    #define log_value(fmt, ...) NSLog((@"%s [Line %d] log value: " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+    #define log_error(fmt, ...) NSLog((@"%s [Line %d] log error: " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+    #define log_value(fmt, ...);
+    #define log_error(fmt, ...);
+#endif
+
+#define string_is_empty(string) (!string || ![string length] || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]])
+#define string_length(string) ([string length])
+#define string(string) (!string_is_empty(string) ? string : @"未填写")
+
+#define alert(title, msg) [[[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show]
+#define alert_error(error_code) [Network alertWithStatusCode:error_code];
+
+#endif

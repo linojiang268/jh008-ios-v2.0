@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ki1-ni-yrE" customClass="GroupEmptyView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_group_empty" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-dU-MSs">
+                    <rect key="frame" x="117" y="11" width="86" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="86" id="581-7y-Dif"/>
+                        <constraint firstAttribute="height" constant="88" id="JqW-pL-89r"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-9v-xtp">
+                    <rect key="frame" x="145" y="107" width="31" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="4BF-dU-MSs" secondAttribute="centerX" id="18j-3H-3w1"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KjM-9v-xtp" secondAttribute="trailing" constant="15" id="8w6-2E-rMC"/>
+                <constraint firstAttribute="bottom" secondItem="KjM-9v-xtp" secondAttribute="bottom" constant="22" id="Fjp-VW-U75"/>
+                <constraint firstItem="KjM-9v-xtp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ki1-ni-yrE" secondAttribute="leading" constant="15" id="bDS-h4-Blx"/>
+                <constraint firstItem="KjM-9v-xtp" firstAttribute="top" secondItem="4BF-dU-MSs" secondAttribute="bottom" constant="8" id="vpc-fq-OH6"/>
+                <constraint firstAttribute="centerY" secondItem="4BF-dU-MSs" secondAttribute="centerY" constant="20" id="wHF-nX-mxC"/>
+                <constraint firstAttribute="centerX" secondItem="KjM-9v-xtp" secondAttribute="centerX" id="wSf-Ia-DJm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="KjM-9v-xtp" id="X5i-Kp-ZXl"/>
+            </connections>
+            <point key="canvasLocation" x="225" y="217"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_group_empty" width="88" height="80"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

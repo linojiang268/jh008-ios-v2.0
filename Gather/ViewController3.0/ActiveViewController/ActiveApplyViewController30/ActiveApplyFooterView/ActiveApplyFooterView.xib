@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5nt-Ed-cGq" customClass="ActiveApplyFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoG-7Q-MnG">
+                    <rect key="frame" x="95" y="46" width="130" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cBe-qL-2O8"/>
+                        <constraint firstAttribute="width" constant="130" id="rgm-zW-6uT"/>
+                    </constraints>
+                    <state key="normal" title="提交报名">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="费用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHd-6j-UbX">
+                    <rect key="frame" x="35" y="12" width="52" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="P2A-bh-0XT"/>
+                        <constraint firstAttribute="height" constant="22" id="we9-B7-f48"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥68.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnz-zw-xDn">
+                    <rect key="frame" x="77" y="12" width="228" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qHd-6j-UbX" firstAttribute="top" secondItem="5nt-Ed-cGq" secondAttribute="top" constant="12" id="2UW-yR-ouc"/>
+                <constraint firstItem="qHd-6j-UbX" firstAttribute="leading" secondItem="5nt-Ed-cGq" secondAttribute="leading" constant="35" id="7RT-kZ-oD8"/>
+                <constraint firstItem="Gnz-zw-xDn" firstAttribute="top" secondItem="5nt-Ed-cGq" secondAttribute="top" constant="12" id="OWc-Iq-VFX"/>
+                <constraint firstAttribute="trailing" secondItem="Gnz-zw-xDn" secondAttribute="trailing" constant="15" id="Th3-oL-R29"/>
+                <constraint firstItem="PoG-7Q-MnG" firstAttribute="top" secondItem="5nt-Ed-cGq" secondAttribute="top" constant="46" id="h0W-Tb-Bcc"/>
+                <constraint firstAttribute="bottom" secondItem="PoG-7Q-MnG" secondAttribute="bottom" constant="18" id="jEW-7k-02N"/>
+                <constraint firstItem="Gnz-zw-xDn" firstAttribute="leading" secondItem="qHd-6j-UbX" secondAttribute="trailing" constant="-10" id="saz-7U-XnX"/>
+                <constraint firstAttribute="centerX" secondItem="PoG-7Q-MnG" secondAttribute="centerX" id="wne-dA-Wsy"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="commitButton" destination="PoG-7Q-MnG" id="smV-c2-sdD"/>
+                <outlet property="costLabel" destination="Gnz-zw-xDn" id="nUo-nM-hJv"/>
+                <outlet property="titleLabel" destination="qHd-6j-UbX" id="404-2R-K33"/>
+            </connections>
+            <point key="canvasLocation" x="69" y="418"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

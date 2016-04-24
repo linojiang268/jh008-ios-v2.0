@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wv2-Bl-ZgG" customClass="NoticeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入关键字" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qx9-uq-Q6S">
+                    <rect key="frame" x="15" y="10" width="238" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYn-vs-LxX">
+                    <rect key="frame" x="261" y="10" width="45" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="moq-PJ-vcH"/>
+                        <constraint firstAttribute="width" constant="45" id="tQ3-kM-jTa"/>
+                    </constraints>
+                    <state key="normal" image="img_newest_notice_search">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AYn-vs-LxX" secondAttribute="bottom" constant="10" id="6Gw-Ow-tMH"/>
+                <constraint firstAttribute="bottom" secondItem="Qx9-uq-Q6S" secondAttribute="bottom" constant="10" id="Rhh-In-DVC"/>
+                <constraint firstItem="AYn-vs-LxX" firstAttribute="top" secondItem="wv2-Bl-ZgG" secondAttribute="top" constant="10" id="iP1-Qx-CvK"/>
+                <constraint firstItem="AYn-vs-LxX" firstAttribute="leading" secondItem="Qx9-uq-Q6S" secondAttribute="trailing" constant="8" id="j3N-9j-snH"/>
+                <constraint firstItem="Qx9-uq-Q6S" firstAttribute="leading" secondItem="wv2-Bl-ZgG" secondAttribute="leading" constant="15" id="oRL-dE-XyV"/>
+                <constraint firstAttribute="trailing" secondItem="AYn-vs-LxX" secondAttribute="trailing" constant="14" id="uK1-kd-sFX"/>
+                <constraint firstItem="Qx9-uq-Q6S" firstAttribute="top" secondItem="wv2-Bl-ZgG" secondAttribute="top" constant="10" id="uzA-99-eY6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchButton" destination="AYn-vs-LxX" id="Yzi-ua-wpj"/>
+                <outlet property="textFieldView" destination="Qx9-uq-Q6S" id="fla-Dn-HrG"/>
+            </connections>
+            <point key="canvasLocation" x="472" y="439"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_newest_notice_search" width="19" height="19"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

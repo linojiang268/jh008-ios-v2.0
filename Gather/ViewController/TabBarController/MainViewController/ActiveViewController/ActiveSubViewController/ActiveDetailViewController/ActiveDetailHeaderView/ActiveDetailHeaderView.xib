@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="q4o-pl-2Rc" customClass="ActiveDetailHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crO-NC-TX8" customClass="BannerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_active_ shade" translatesAutoresizingMaskIntoConstraints="NO" id="hg7-0x-BMS">
+                    <rect key="frame" x="0.0" y="140" width="320" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="TZg-a7-PtC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BL-HV-B64">
+                    <rect key="frame" x="15" y="221" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Fhq-bb-3Re"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hg7-0x-BMS" firstAttribute="leading" secondItem="q4o-pl-2Rc" secondAttribute="leading" id="Bsf-qx-Tde"/>
+                <constraint firstAttribute="bottom" secondItem="crO-NC-TX8" secondAttribute="bottom" id="F38-Ah-UTq"/>
+                <constraint firstItem="crO-NC-TX8" firstAttribute="top" secondItem="q4o-pl-2Rc" secondAttribute="top" id="WDk-hD-bp7"/>
+                <constraint firstItem="crO-NC-TX8" firstAttribute="leading" secondItem="q4o-pl-2Rc" secondAttribute="leading" id="dpx-xG-ge4"/>
+                <constraint firstAttribute="bottom" secondItem="7BL-HV-B64" secondAttribute="bottom" constant="8" id="gMF-QW-yCq"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7BL-HV-B64" secondAttribute="trailing" constant="15" id="l0L-63-rNE"/>
+                <constraint firstAttribute="trailing" secondItem="hg7-0x-BMS" secondAttribute="trailing" id="l6w-R3-FPw"/>
+                <constraint firstAttribute="bottom" secondItem="hg7-0x-BMS" secondAttribute="bottom" id="sNi-tZ-ffc"/>
+                <constraint firstAttribute="trailing" secondItem="crO-NC-TX8" secondAttribute="trailing" id="sjK-0n-9fW"/>
+                <constraint firstItem="7BL-HV-B64" firstAttribute="leading" secondItem="q4o-pl-2Rc" secondAttribute="leading" constant="15" id="vkU-JQ-xxV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannerView" destination="crO-NC-TX8" id="fGt-4N-XB9"/>
+                <outlet property="shadowView" destination="hg7-0x-BMS" id="nzE-df-FEV"/>
+                <outlet property="titleLabel" destination="7BL-HV-B64" id="xOY-st-SYJ"/>
+            </connections>
+            <point key="canvasLocation" x="576" y="332"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_active_ shade" width="375" height="110"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rsc-1f-lFH" customClass="GroupHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQH-uf-DDg" customClass="CustomButton">
+                    <rect key="frame" x="5" y="0.0" width="74" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="rO1-SA-fpO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="活动流程" image="btn_group_active_flow">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4s-e9-pf3" customClass="CustomButton">
+                    <rect key="frame" x="163" y="0.0" width="73" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="最新通知" image="btn_group_notice">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5M-qi-Tdj" customClass="CustomButton">
+                    <rect key="frame" x="241" y="0.0" width="74" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="照片" image="btn_group_photo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-WV-DhN" customClass="CustomButton">
+                    <rect key="frame" x="84" y="0.0" width="74" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="图示" image="btn_group_ graphic">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8c-fY-isk">
+                    <rect key="frame" x="15" y="112" width="290" height="55"/>
+                    <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="l1w-gh-abx"/>
+                    </constraints>
+                    <state key="normal" title="活动缴费" image="img_active_group_cost">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="x8c-fY-isk" secondAttribute="bottom" constant="8" id="0IO-N1-bHZ"/>
+                <constraint firstItem="eqp-WV-DhN" firstAttribute="leading" secondItem="BQH-uf-DDg" secondAttribute="trailing" constant="5" id="2eU-0n-sOe"/>
+                <constraint firstItem="eqp-WV-DhN" firstAttribute="top" secondItem="Rsc-1f-lFH" secondAttribute="top" id="3B9-Wh-J4h"/>
+                <constraint firstItem="U5M-qi-Tdj" firstAttribute="leading" secondItem="T4s-e9-pf3" secondAttribute="trailing" constant="5" id="A31-PG-TW9"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="width" secondItem="eqp-WV-DhN" secondAttribute="width" id="LOz-nv-KbY"/>
+                <constraint firstItem="BQH-uf-DDg" firstAttribute="top" secondItem="Rsc-1f-lFH" secondAttribute="top" id="PC4-Q0-hxa"/>
+                <constraint firstAttribute="trailing" secondItem="U5M-qi-Tdj" secondAttribute="trailing" constant="5" id="TNi-4l-lPi"/>
+                <constraint firstItem="x8c-fY-isk" firstAttribute="top" secondItem="Rsc-1f-lFH" secondAttribute="top" constant="112" id="VtJ-se-s1l"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="height" secondItem="eqp-WV-DhN" secondAttribute="height" id="W16-Xo-SBk"/>
+                <constraint firstItem="BQH-uf-DDg" firstAttribute="width" secondItem="eqp-WV-DhN" secondAttribute="width" id="WHi-bI-4Bn"/>
+                <constraint firstItem="U5M-qi-Tdj" firstAttribute="top" secondItem="Rsc-1f-lFH" secondAttribute="top" id="Yne-D6-5yr"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="height" secondItem="U5M-qi-Tdj" secondAttribute="height" id="aDc-ie-Zro"/>
+                <constraint firstAttribute="trailing" secondItem="x8c-fY-isk" secondAttribute="trailing" constant="15" id="bNv-gN-r1w"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="top" secondItem="Rsc-1f-lFH" secondAttribute="top" id="bbD-lr-2Qo"/>
+                <constraint firstItem="x8c-fY-isk" firstAttribute="leading" secondItem="Rsc-1f-lFH" secondAttribute="leading" constant="15" id="e6M-xa-91O"/>
+                <constraint firstItem="BQH-uf-DDg" firstAttribute="leading" secondItem="Rsc-1f-lFH" secondAttribute="leading" constant="5" id="ehf-0S-5QB"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="width" secondItem="U5M-qi-Tdj" secondAttribute="width" id="her-lo-NzQ"/>
+                <constraint firstItem="T4s-e9-pf3" firstAttribute="leading" secondItem="eqp-WV-DhN" secondAttribute="trailing" constant="5" id="jc5-Oc-1OZ"/>
+                <constraint firstItem="BQH-uf-DDg" firstAttribute="height" secondItem="eqp-WV-DhN" secondAttribute="height" id="p5h-K8-20u"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="costButton" destination="x8c-fY-isk" id="dK5-ii-V4u"/>
+                <outlet property="flowButton" destination="BQH-uf-DDg" id="2i0-mx-HHY"/>
+                <outlet property="graphicButton" destination="eqp-WV-DhN" id="t9m-IC-b8d"/>
+                <outlet property="noticeButton" destination="T4s-e9-pf3" id="SMh-DQ-adb"/>
+            </connections>
+            <point key="canvasLocation" x="304" y="423.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="rA0-xO-xE6" customClass="GroupHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-EM-w5r" customClass="CustomButton">
+                    <rect key="frame" x="163" y="0.0" width="144" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="144" id="KRd-lO-B0O"/>
+                        <constraint firstAttribute="height" constant="90" id="m51-zM-QcM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="照片" image="btn_group_photo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KH-bm-Mms" customClass="CustomButton">
+                    <rect key="frame" x="13" y="0.0" width="144" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="144" id="4mG-gx-qZS"/>
+                        <constraint firstAttribute="height" constant="90" id="zjp-SN-4Ej"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="路线图" image="btn_group_roadmap">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="5KH-bm-Mms" secondAttribute="centerX" constant="75" id="77p-N1-Mvd"/>
+                <constraint firstAttribute="centerX" secondItem="GfX-EM-w5r" secondAttribute="centerX" constant="-75" id="WDI-jz-69X"/>
+                <constraint firstAttribute="centerY" secondItem="5KH-bm-Mms" secondAttribute="centerY" id="pPF-on-qO0"/>
+                <constraint firstAttribute="centerY" secondItem="GfX-EM-w5r" secondAttribute="centerY" id="zYy-uR-67B"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="photoButton" destination="GfX-EM-w5r" id="VTg-cQ-MNh"/>
+                <outlet property="roadmapButton" destination="5KH-bm-Mms" id="ZV0-UE-Ayd"/>
+            </connections>
+            <point key="canvasLocation" x="304" y="624"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_group_ graphic" width="50" height="50"/>
+        <image name="btn_group_active_flow" width="50" height="50"/>
+        <image name="btn_group_notice" width="50" height="50"/>
+        <image name="btn_group_photo" width="50" height="50"/>
+        <image name="btn_group_roadmap" width="50" height="50"/>
+        <image name="img_active_group_cost" width="28" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

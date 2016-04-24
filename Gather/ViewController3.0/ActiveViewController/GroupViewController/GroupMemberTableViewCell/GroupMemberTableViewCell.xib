@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nid-dg-vOq" customClass="GroupMemberTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nid-dg-vOq" id="4fd-Me-63I">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-ig-wjt">
+                        <rect key="frame" x="10" y="13" width="2" height="15"/>
+                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="U1e-zr-Ihn"/>
+                            <constraint firstAttribute="width" constant="2" id="e82-8s-LWV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdX-gR-ln8">
+                        <rect key="frame" x="20" y="10" width="49" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="MOW-fe-OB2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.43137254899999999" green="0.45098039220000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="83l-Vu-MPd">
+                        <rect key="frame" x="0.0" y="41" width="320" height="101"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="101" id="FBl-MK-cbd"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="08o-4o-G0G">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-PH-pSf">
+                        <rect key="frame" x="236" y="158" width="70" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="SDP-c4-Y91"/>
+                            <constraint firstAttribute="width" constant="70" id="tll-iE-UO9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="查看更多">
+                            <color key="titleColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="83l-Vu-MPd" secondAttribute="trailing" id="I9K-IQ-lqN"/>
+                    <constraint firstItem="Tld-ig-wjt" firstAttribute="top" secondItem="4fd-Me-63I" secondAttribute="top" constant="13" id="IbI-zr-s38"/>
+                    <constraint firstItem="Tld-ig-wjt" firstAttribute="leading" secondItem="4fd-Me-63I" secondAttribute="leading" constant="10" id="Je9-xz-ppk"/>
+                    <constraint firstItem="T2m-PH-pSf" firstAttribute="top" secondItem="83l-Vu-MPd" secondAttribute="bottom" constant="16" id="SF0-Gh-DZz"/>
+                    <constraint firstItem="83l-Vu-MPd" firstAttribute="top" secondItem="FdX-gR-ln8" secondAttribute="bottom" constant="10" id="YKW-gb-P5Y"/>
+                    <constraint firstItem="FdX-gR-ln8" firstAttribute="leading" secondItem="Tld-ig-wjt" secondAttribute="trailing" constant="8" id="dar-tC-K3U"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FdX-gR-ln8" secondAttribute="trailing" constant="15" id="f8G-v3-td7"/>
+                    <constraint firstAttribute="bottom" secondItem="83l-Vu-MPd" secondAttribute="bottom" constant="7" id="kzf-XD-0h8"/>
+                    <constraint firstAttribute="trailing" secondItem="T2m-PH-pSf" secondAttribute="trailing" constant="14" id="nF1-4i-VoJ"/>
+                    <constraint firstItem="83l-Vu-MPd" firstAttribute="leading" secondItem="4fd-Me-63I" secondAttribute="leading" id="nIJ-ja-7wF"/>
+                    <constraint firstAttribute="bottom" secondItem="T2m-PH-pSf" secondAttribute="bottom" constant="16" id="xaM-gy-vgM"/>
+                    <constraint firstItem="FdX-gR-ln8" firstAttribute="top" secondItem="4fd-Me-63I" secondAttribute="top" constant="10" id="yr4-4b-bNt"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="kzf-XD-0h8"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="83l-Vu-MPd" id="tpt-2Q-X6p"/>
+                <outlet property="moreButtonHeightConstraint" destination="SDP-c4-Y91" id="5zT-Yu-kTe"/>
+                <outlet property="moreButtonMarginBottomConstraint" destination="xaM-gy-vgM" id="ukQ-4T-VaL"/>
+                <outlet property="seeMoreButton" destination="T2m-PH-pSf" id="p99-fS-PkS"/>
+                <outlet property="titleLabel" destination="FdX-gR-ln8" id="N7F-o0-dmz"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="345"/>
+        </tableViewCell>
+    </objects>
+</document>

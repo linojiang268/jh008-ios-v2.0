@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>99850F95-9077-43C2-93B0-3EA3336B3270</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Gather</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>05E17904C11A787AADA4CB3795E4244E23DFB4EE</key>
+		<string>ssh://115.28.161.149:28000/jihe-ios-gather.git</string>
+		<key>fb1b0306-1a7b-b249-b14f-0abee7dd6f86++2258</key>
+		<string>https://192.168.75.168:8888/svn/CTI_Chang3.0/Trunk/Development/Source/Phone/IOS/MainBranch/ISingV3</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Gather.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>05E17904C11A787AADA4CB3795E4244E23DFB4EE</key>
+		<string>..</string>
+		<key>fb1b0306-1a7b-b249-b14f-0abee7dd6f86++2258</key>
+		<string>../Gather/Test/ISingV3</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>fb1b0306-1a7b-b249-b14f-0abee7dd6f86++2258</key>
+		<string>https://192.168.75.168:8888/svn/CTI_Chang3.0</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://115.28.161.149:28000/jihe-ios-gather.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>05E17904C11A787AADA4CB3795E4244E23DFB4EE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>05E17904C11A787AADA4CB3795E4244E23DFB4EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Gather</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>fb1b0306-1a7b-b249-b14f-0abee7dd6f86++2258</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ISingV3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

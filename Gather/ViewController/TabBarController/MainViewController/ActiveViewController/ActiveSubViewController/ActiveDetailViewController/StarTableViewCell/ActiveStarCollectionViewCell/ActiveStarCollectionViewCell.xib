@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0gq-wk-1kV" customClass="ActiveStarCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="70" height="101"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sa4-jz-abH">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="lw8-j8-M6L"/>
+                            <constraint firstAttribute="height" constant="70" id="trg-a3-Lh2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmj-o6-aW7">
+                        <rect key="frame" x="0.0" y="80" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="T1b-hc-y23"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="sa4-jz-abH" firstAttribute="top" secondItem="0gq-wk-1kV" secondAttribute="top" id="EDc-x4-ytC"/>
+                <constraint firstItem="nmj-o6-aW7" firstAttribute="top" secondItem="sa4-jz-abH" secondAttribute="bottom" constant="10" id="Tee-8t-0QQ"/>
+                <constraint firstAttribute="bottom" secondItem="nmj-o6-aW7" secondAttribute="bottom" id="foK-Nf-KAK"/>
+                <constraint firstItem="nmj-o6-aW7" firstAttribute="leading" secondItem="0gq-wk-1kV" secondAttribute="leading" id="g4o-kk-ugm"/>
+                <constraint firstAttribute="trailing" secondItem="nmj-o6-aW7" secondAttribute="trailing" id="nhy-Ps-IKB"/>
+                <constraint firstAttribute="centerX" secondItem="sa4-jz-abH" secondAttribute="centerX" id="xPM-9d-yMw"/>
+            </constraints>
+            <size key="customSize" width="80" height="127"/>
+            <connections>
+                <outlet property="imageView" destination="sa4-jz-abH" id="XwD-Lb-JMV"/>
+                <outlet property="nicknameLabel" destination="nmj-o6-aW7" id="kkw-5Y-90V"/>
+            </connections>
+            <point key="canvasLocation" x="161" y="322.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
